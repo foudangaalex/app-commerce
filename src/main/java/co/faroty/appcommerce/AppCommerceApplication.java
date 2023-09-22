@@ -23,14 +23,14 @@ public class AppCommerceApplication {
 		SpringApplication.run(AppCommerceApplication.class, args);
 	}
 
-	@Bean
+	//@Bean
 	CommandLineRunner commandLineRunner(AccountService accountService){
 		return args -> {
 
 				UserDTO userDTO=new UserDTO();
 				userDTO.setUserName("Fouda");
 				userDTO.setImageUser("Im.png");
-				userDTO.setEmail("Ngan@gmail.com");
+				userDTO.setEmail("Fouda@gmail.com");
 				userDTO.setPassWord(passwordEncoder().encode("1234"));
 				userDTO.setTel("2132566677");
 				accountService.addUser(userDTO);
